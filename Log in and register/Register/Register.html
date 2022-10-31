@@ -5,77 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="signinup.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logoContent">
-            <a href="#" class="logo"><img src="https://cdn2.vectorstock.com/i/thumb-large/58/61/chef-hat-logo-with-recipe-on-white-background-vector-35065861.jpg" alt=""></a>
-            <h1 class="logoName">Recipes</h1>
-        </div>
+    <button onclick="document.getElementById('signup').style.display='block'">Sign up</button>
 
-        <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#recipes">recipes</a>
-            <a href="#review">review</a>
-            <a href="#contact">contact</a>
-        </nav>
-
-        <div class="icon">
-            <i id="search"></i>
-            <i id="menu-bar"></i>
-        </div>
-
-        <div class="search">
-            <input type="search" placeholder="search...">
-        </div>
-    </header>
-    <footer class="footer" id="contact">
-        <div class="box-container">
-            <div class="mainBox">
-                <div class="content">
-                    <a href="#"><img src="images/logo.png" alt=""></a>
-                    <h1 class="logoName"> CodeYouth Recipes </h1>
-                </div>
-
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta accusamus maxime quod.</p>
-
-            </div>
-            <div class="box">
-                <h3>Quick link</h3>
-                <a href="#"> <i></i>Home</a>
-                <a href="#"> <i></i>product</a>
-                <a href="#"> <i></i>blogs</a>
-                <a href="#"> <i></i>review</a>
-                <a href="#"> <i></i>contact</a>
-
-            </div>
-            <div class="box">
-                <h3>Extra link</h3>
-                <a href="#"> <i></i>Account info</a>
-                <a href="#"> <i></i>order item</a>
-                <a href="#"> <i></i>privacy policy</a>
-                <a href="#"> <i></i>payment method</a>
-                <a href="#"> <i></i>our  services</a>
-            </div>
-            <div class="box">
-                <h3>Contact Info</h3>
-                <a href="#"> <i ></i>613-777-1111</a>
-                <a href="#"> <i ></i>recipwa@gmail.com</a>
-
+    <div id="signup" class="modal">
+        <span onclick="document.getElementById('signup')style.display='none'" class="close" title="=Close modal">times;</span>
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <h1>Sign up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom: ;15px"> Remember me
+                </label>
             </div>
 
-        </div>
-        <div class="share">
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-        </div>
-        <div class="credit">
-            created by <span>Code Youth </span> |all rights reserved ! 
-        </div>
-    </footer>
+        </form>
+    </div>
 </body>
 </html>

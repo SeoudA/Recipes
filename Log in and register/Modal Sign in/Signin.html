@@ -7,6 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    hello
+    <button onclick="document.getElementById('signin').style.display='block'"> Sign in</button>
+
+    <div id="signin" class="modal">
+        <span onclick="document.getElementById('signin').style.display='none'"
+      class="close" title="Close Modal">&times;</span>
+      <div class="container">
+        <label for="user"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="user" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <button type="submit">Sign in</button>
+        <label>
+            <input type="checkbox" checked="checked" name="=remember"> Remember me
+        </label>
+      </div>
+      <div class="container" style="background-color: #f1f1f1">
+        <button type="button" onclick="document.getElementById('sign in').style.display='none'" class="cancelbtn"> Cancel </button>
+        <span class="psw"> Forgot <a href="#">Password?</a> </span>
+    </div>
+  
 </body>
 </html>

@@ -46,3 +46,36 @@ button:hover {
     background-color: #474e5d;
     padding-top: 50px;
 }
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #f1f1f1;
+    font-weight: bold;
+    font-size: 40px;
+}
+.close :hover,
+.close focus {
+    color: #f44336;
+    cursor: pointer;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+      width: 100%;
+    }
+}

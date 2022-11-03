@@ -250,10 +250,11 @@ html::-webkit-scrollbar-thumb{
     font-size: 3rem;
     color: var(--white);
     padding-bottom: .7rem;
+    align-items: center;
 }
 .newsletter form .box{
     width: 100%;
-    margin: .7rem 0;
+    margin: .40rem 0;
     padding: 1rem 1.2rem;
     color: var(--black);
     border-radius: .5rem;

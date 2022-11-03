@@ -86,3 +86,21 @@ var swiper = new Swiper(".product-row", {
       },
     },
   });
+  function appendsignin(){
+    var myframe = document.createElement('iframe')
+    myframe.setAttribute("src","../Modal/Signin.html")
+    myframe.setAttribute("width", "500")
+    myframe.setAttribute("height","500")
+    myframe.setAttribute("title", "doesnotmatter")
+    myframe.setAttribute("frameborder", "0")
+    document.body.appendChild(myframe)
+  }
+  function appendregister(){
+    var myframe = document.createElement('iframe')
+    myframe.setAttribute("src","../Modal/register.html")
+    myframe.setAttribute("width", "500")
+    myframe.setAttribute("height","500")
+    myframe.setAttribute("title", "doesnotmatter")
+    myframe.setAttribute("frameborder", "0")
+    document.body.appendChild(myframe)
+  }

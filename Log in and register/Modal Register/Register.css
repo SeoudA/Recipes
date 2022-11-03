@@ -64,7 +64,7 @@ hr {
     font-weight: bold;
     font-size: 40px;
 }
-.close :hover,
+.close:hover,
 .close focus {
     color: #f44336;
     cursor: pointer;

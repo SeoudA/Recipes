@@ -56,3 +56,23 @@ button:hover {
     background-color: #f44336;
 }
 
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+.container {
+    padding: 16px;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+.cancelbtn {
+    width: 100%;
+}
+@media screen and (max-width:300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}

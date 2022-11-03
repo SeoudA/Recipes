@@ -196,12 +196,12 @@ html::-webkit-scrollbar-thumb{
     background-size: cover;
     background-position: center center;
 }
-/* .blogs  .blogs-row .box {
+.blogs  .blogs-row .box {
     display: flex;
     align-items: center;
     background-color: var(--white);
     flex-wrap: wrap;
-} */
+} 
 .blogs .blogs-row .box .img{
     flex: 1 1 45rem;
 }

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Meal For Your Ingredients</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <!-- <link rel = "stylesheet" href = "style.css"> -->
+      <!-- cdn icon link  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <!-- custom css file  -->
+      <link rel="stylesheet" href="style1.css">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <!-- FontAwesome CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+          <!-- swiper link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- cdn icon link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+</head>
+<body>
+   <!-- header section start here  -->
+   <header class="header">
+    <div class="logoContent">
+        <a href="#" class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxGPWX6u1LBrOHdY-8lS5J_SvvUu1_2KV-PSWsv_rN6A5BVgFeqJyID6MPN2zeRg32H2E&usqp=CAU" alt=""></a>
+        <h1 class="logoName"></h1>
+    </div>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#recipes">recipes</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <div class="sign">
+            <button onclick="appendsignin()" class="modalsign">Sign in</button>
+            <button onclick="appendregister()" class="modalregister">Sign up</button>
+        </div>
+    </nav>
+
+    <div class="icon">
+        <!-- <i class="fas fa-search" id="search"></i> -->
+        <i class="fas fa-bars" id="menu-bar"></i>
+    </div>
+
+    <!-- <div class="search">
+        <input type="search" placeholder="search...">
+    </div> -->
+</header>
+<!-- header section end here  -->
+
+  <section class="hero hero--video">
+    <div class="container">
+      <div class="col-12">
+        <div class="search">
+            <input class="search-control" type="text" name="s" placeholder="What do you want to eat?" id="search-input">
+            <button type="submit" class = "search-btn btn" id = "search-btn"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+    <video class="d-lg-block" loop autoplay muted>
+      <source src="videos\hero3.mp4">
+    </video>
+  </section>
+
+  <div class = "container">
+    <div class = "meal-wrapper">
+      <div class = "meal-search">
+        <!-- <h2 class = "title">Find Meals For Your Ingredients</h2> -->
+        <!-- <blockquote>Real food doesn't have ingredients, real food is ingredients.<br>
+          <cite>- Jamie Oliver</cite>
+        </blockquote>
+
+        <div class = "meal-search-box">
+          <input type = "text" class = "search-control" placeholder="Enter an ingredient" id = "search-input">
+          <button type = "submit" class = "search-btn btn" id = "search-btn">
+            <i class = "fas fa-search"></i>
+|          </button>
+        </div> -->
+      </div>
+  
+  <!-- <div class = "container">
+    <div class = "meal-wrapper">
+      <div class = "meal-search">
+        <h2 class = "title">Find Meals For Your Ingredients</h2>
+        <blockquote>Real food doesn't have ingredients, real food is ingredients.<br>
+          <cite>- Jamie Oliver</cite>
+        </blockquote>
+
+        <div class = "meal-search-box">
+          <input type = "text" class = "search-control" placeholder="Enter an ingredient" id = "search-input">
+          <button type = "submit" class = "search-btn btn" id = "search-btn">
+            <i class = "fas fa-search"></i>
+          </button>
+        </div>
+      </div> -->
+
+      <div class = "meal-result">
+        <h2 class = "title">Your Search Results:</h2>
+        <div id= "meal">
+          <!-- meal item -->
+          <!-- <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "food.jpg" alt = "food">
+            </div>
+            <div class = "meal-name">
+              <h3>Potato Chips</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+          </div> -->
+          <!-- end of meal item -->
+        </div>
+      </div>
+
+
+      <div class = "meal-details">
+        <!-- recipe close btn -->
+        <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
+          <i class = "fas fa-times"></i>
+        </button>
+
+        <!-- meal content -->
+        <div class = "meal-details-content">
+          <!-- <h2 class = "recipe-title">Meals Name Here</h2>
+          <p class = "recipe-category">Category Name</p>
+          <div class = "recipe-instruct">
+            <h3>Instructions:</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
+          </div>
+          <div class = "recipe-meal-img">
+            <img src = "food.jpg" alt = "">
+          </div>
+          <div class = "recipe-link">
+            <a href = "#" target = "_blank">Watch Video</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- product section start here  -->
+  <section class="product" id="product">
+    <div class="heading">
+        <h2>Here are some ingredient examples</h2>
+    </div>
+    <div class="swiper product-row">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="img">
+                    <img src="garlic-modified.png" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Garlic</h3>
+                    
+                    <div class="orderNow">
+                        <!-- <button>Order Now </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="img">
+                    <img src="tomato (1)-modified.png" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Tomato</h3>
+                    
+                    <div class="orderNow">
+                        <!-- <button>Order Now </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="img">
+                    <img src="beef-modified.png" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Beef</h3>
+                    
+                    <div class="orderNow">
+                        <!-- <button>Order Now </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="img">
+                    <img src="egg-modified.png" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Eggs</h3>
+                    
+                    <div class="orderNow">
+                        <!-- <button>Order Now </button> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper product-row">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="img">
+                    <img src="chicken breast-modified (1).png" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Chicken Breast</h3>
+                    
+                    <div class="orderNow">
+                        <!-- <button>Order Now </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="img">
+                    <img src="salmon-modified.png" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Salmon</h3>
+                    
+                    <div class="orderNow">
+                        <!-- <button>Order Now </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="img">
+                    <img src="lamb-modified.png" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Lamb</h3>
+                    
+                    <div class="orderNow">
+                        <!-- <button>Order Now </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="img">
+                    <img src="tuna (2)-modified.png">
+                </div>
+                <div class="product-content">
+                    <h3>Tuna</h3>
+                    
+                    <div class="orderNow">
+                        <!-- <button>Order Now </button> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- product section end here  -->
+
+<!-- blogs section start here  -->
+<section class="blogs" id="blogs">
+
+    <div class=" swiper blogs-row">
+        <div class="swiper-wrapper">
+            <div class=" swiper-slide box">
+                <div class="img">
+                    <img src="https://www.themealdb.com/images/media/meals/qxytrx1511304021.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Our Top Recipe</h3>
+                    <h1>Chicken Couscous</h1>
+                    <p>Take a break from pasta, rice, and potatoes with this quick chicken couscous bowl. Made with chicken breast (or thighs, or even leftover chicken!) and diced veggies of your choice, it's an impressive meal that takes just minutes to make once all the ingredients are prepped. The chicken is moist and tender, the couscous is light yet satisfying, and the veggies add color, flavor, and texture. It can be eaten at any temperature and would be perfect to pack for a picnic.</p>
+                    <a href="#blogs" class="btn">learn more</a>
+                </div>
+            </div>
+            <!-- <div class=" swiper-slide box"> -->
+                <div class="img">
+                    <!-- <img src="images/blog-img2.png" alt=""> -->
+                <!-- </div>
+                <div class="content">
+                    <h3>Caramel Bourbon Vanilla Cupcakes </h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolorum voluptatum
+                        corporis accusamus aperiam fugiat tempora blanditiis labore dolor aliquid maxime nobis
+                        laborum sed soluta voluptatibus aspernatur natus, dicta quisquam.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam ab ullam reiciendis sint
+                        eaque at.</p>
+                    <a href="#blogs" class="btn">learn more</a>
+                </div>
+            </div>
+            <div class=" swiper-slide box">
+                <div class="img">
+                    <!-<img src="images/blog-img2.png" alt=""> -->
+                <!-- </div>
+                <div class="content">
+                    <h3>Caramel Bourbon Vanilla Cupcakes </h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolorum voluptatum
+                        corporis accusamus aperiam fugiat tempora blanditiis labore dolor aliquid maxime nobis
+                        laborum sed soluta voluptatibus aspernatur natus, dicta quisquam.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam ab ullam reiciendis sint
+                        eaque at.</p>
+                    <a href="#blogs" class="btn">learn more</a>
+                </div>
+            </div>
+        </div> --> -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div> -->
+
+
+    </div>
+</section>
+
+<!-- blogs section ends here  -->
+
+<!-- newsletter section start here  -->
+
+<section class="newsletter">
+    <form action="">
+        <h3>subscribe for latest update</h3>
+        <input type="email" name="" placeholder="enter your email" id="" class="box">
+        <input type="button" value="subscribe" class="box2">
+    </form>
+</section>
+<!-- newsletter section ends here  -->
+
+<!-- review section start here  -->
+<section class="review" id="review">
+    <div class="heading">
+        <h2>Team Members</h2>
+    </div>
+
+
+    <div class=" swiper review-row">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="client-review">
+                    <p><br> "A balanced diet is a cookie in each hand."</p>
+                </div>
+                <div class="client-info">
+                    <div class="img">
+                        <img src="Avater1.webp" alt="">
+                    </div>
+                    <div class="clientDetailed">
+                        <h3>Mohamed Mohamud</h3>
+                        <p>Chef</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="client-review">
+                    <p><br> "You don't need a silver fork to eat good food."</p>
+                </div>
+                <div class="client-info">
+                    <div class="img">
+                        <img src="avatar2.webp" alt="">
+                    </div>
+                    <div class="clientDetailed">
+                        <h3>Abdirahman Hersi</h3>
+                        <p>Chef</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="client-review">
+                    <p>"Cooking is like love. It should be entered into with abandon or not at all."</p>
+                </div>
+                <div class="client-info">
+                    <div class="img">
+                        <img src="avatar3.webp" alt="">
+                    </div>
+                    <div class="clientDetailed">
+                        <h3>Ikra Kulmiye</h3>
+                        <p>Chef</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="client-review">
+                    <p>"A recipe has no soul. You, as the cook, must bring soul to the recipe."</p>
+                </div>
+                <div class="client-info">
+                    <div class="img">
+                        <img src="avator3.png" alt="">
+                    </div>
+                    <div class="clientDetailed">
+                        <h3>Seoud Alrass</h3>
+                        <p>Chef</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </div>
+</section>
+<!-- review section ends here  -->
+
+<!-- footer section start here  -->
+
+<footer class="footer" id="contact">
+    <div class="box-container">
+        <div class="mainBox">
+            <div class="content">
+                <a href="#"><img src="data:image/png;base64,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" height="40" width="100" alt=""></a>
+                <h1 class="logoName"></h1>
+            </div>
+
+        </div>
+        <div class="box">
+            <h3>Quick link</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>product</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>Team</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
+
+        </div>
+        <!-- <div class="box">
+            <h3>Extra link</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i>Account info</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>order item</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>privacy policy</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>payment method</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>our  services</a>
+        </div> -->
+        <div class="box">
+            <h3>Contact Info</h3>
+            <h5>For more information please contact anytime via email or call.</h5>
+            <a href="#"> <i class="fas fa-phone"></i>1-800 999-999</a>
+            <a href="#"> <i class="fas fa-envelope"></i>recipies.org@gmail.com</a>
+
+        </div>
+
+    </div>
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file  -->
+<script src="index.js"></script>
+<script src = "Apidata.js"></script>
+
+
+</body>
+
+</html>
+

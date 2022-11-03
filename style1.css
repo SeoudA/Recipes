@@ -62,7 +62,7 @@ html::-webkit-scrollbar-thumb{
     font-weight: bold;
 }
 .header .navbar a:hover{
-    border-bottom: .1rem solid var(--black);
+    /* border-bottom: .1rem solid var(--black); */
     padding-bottom: .4rem;
 }
 .header .icon i{
